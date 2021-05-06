@@ -13,11 +13,7 @@ export const Nav = () => {
       <nav className={styles.heading}>
         <ul className="nav">
           <li className="nav-item">
-            {/* <a
-              className="cart-wishlist"
-              onClick={() => routeHandler(routeNames.productList)}
-            >
-            </a> */}
+            
             <NavLink to="/videos" className={styles.navPills}>
               <svg width="1em" height="1em" viewBox="0 0 24 24">
                 <path
@@ -43,12 +39,7 @@ export const Nav = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            {/* <a
-              className="cart-wishlist"
-              onClick={() => routeHandler(routeNames.cart)}
-            >
-             
-            </a> */}
+            
             <NavLink to="/account/details" className={styles.navPills}>
               <svg width="1em" height="1em" viewBox="0 0 24 24">
                 <path
