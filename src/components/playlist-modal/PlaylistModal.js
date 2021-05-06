@@ -9,8 +9,6 @@ export const PlaylistModal = ({ setOpenModal, incommingVideo }) => {
   const { playlists, dispatchPlaylist } = usePlaylist();
   const { dispatchToast } = useToast();
 
-  console.log({ playlists });
-
   const addToPlaylist = () => {
     if (
       playlists.filter((playlist) => playlist.name.toLowerCase() === playlistName.toLowerCase()).length > 0
@@ -37,16 +35,7 @@ export const PlaylistModal = ({ setOpenModal, incommingVideo }) => {
     setPlaylistName("");
   };
 
-  // const checkIfVideoIsPresentInPlaylist = (videosInPlaylist, video) => {
-  //   return (
-  //     videosInPlaylist.filter(
-  //       (videoInPlaylist) => videoInPlaylist.id === video.id
-  //     ).length > 0
-  //   );
-  // };
-
   const addVideoToPlaylist = (playlistName, video) => {
-    console.log("video in add method on modal component", video);
     dispatchPlaylist({
       type: "ADD_VIDEO_TO_PLAYLIST",
       payload: { name: playlistName, video: video },
@@ -95,7 +84,6 @@ export const PlaylistModal = ({ setOpenModal, incommingVideo }) => {
         <div className="modal-content">
           <ul className="stacked-list">
             {playlists.map((item) => {
-              console.log({ item });
               return (
                 <li className="list-item" key={item.name}>
                   <label>
@@ -107,7 +95,6 @@ export const PlaylistModal = ({ setOpenModal, incommingVideo }) => {
                       className="list-item-left"
                       type="checkbox"
                       checked={
-                        // checkIfVideoIsPresentInPlaylist(item.videos, video)
 
                         item &&
                         item?.videos.filter(

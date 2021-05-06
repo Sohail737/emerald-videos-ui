@@ -38,7 +38,6 @@ export const Login = () => {
   const { isUserLoggedIn,dispatchAuth } = useAuth();
 
   useEffect(()=>{
-    console.log("state from ",state?.from)
     isUserLoggedIn && navigate(state?.from ? `${state.from}` : "/");
   },[])
 
@@ -76,7 +75,7 @@ export const Login = () => {
         navigate(state?.from ? state.from : "/");
       }
     } catch (error) {
-      console.log("error while logging in", error);
+      console.log("Error while logging in", error);
       dispatchFormFields({
         type: "LOGIN_ERROR",
         payload: { loginError: "email or password incorrect" },

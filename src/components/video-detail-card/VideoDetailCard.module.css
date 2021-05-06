@@ -1,81 +1,76 @@
-
 :root {
-    --primary-color: rgb(102, 51, 153);
-    --secondary-color: rgb(147, 197, 253);
-    --white: rgb(255, 255, 255);
-    --grey: rgb(175, 168, 168);
-    --dark-grey:rgb(88, 80, 80);
-    --light-grey: #ebebeb;
-    --black: rgb(0, 0, 0);
-    --red:rgb(253, 2, 2);
-  }
-
-.nav{
-    display:flex;
-    justify-content:space-between;
-    margin:0.3rem 0;
-}
-.nav > svg{
-    height: 2rem;
-    width: 2rem;
+  --primary-color: rgb(102, 51, 153);
+  --secondary-color: rgb(147, 197, 253);
+  --white: rgb(255, 255, 255);
+  --grey: rgb(175, 168, 168);
+  --dark-grey: rgb(88, 80, 80);
+  --light-grey: rgb(224, 215, 215);
+  --black: rgb(0, 0, 0);
+  --red: rgb(253, 2, 2);
 }
 
-.avatarContainer{
-    display:flex;
-    margin:0.3rem 0
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3rem 0;
+}
+.nav > svg {
+  height: 2rem;
+  width: 2rem;
 }
 
-.avatarName{
-    align-self:center;
-    margin-left:1rem;
-    font-weight:500;
-
+.avatarContainer {
+  display: flex;
+  margin: 0.3rem 0;
 }
 
-.videoDesc{
-    margin:0.5rem 0;
+.avatarName {
+  align-self: center;
+  margin-left: 1rem;
+  font-weight: 500;
 }
 
-.videoDate{
-    color:var(--dark-grey);
-    font-size:0.9rem;
+.videoDesc {
+  margin: 0.5rem 0;
 }
 
-.videoAction{
-    align-self:center;
-    line-height:1;
-    cursor: pointer;
+.videoDate {
+  color: var(--dark-grey);
+  font-size: 0.9rem;
 }
 
-.actionPills{
-    width:1.5rem;
-    height:1.5rem;
-    margin-left:2rem
+.videoAction {
+  align-self: center;
+  line-height: 1;
+  cursor: pointer;
 }
 
-.liked{
-    composes:actionPills;
-    color:var(--primary-color);
+.actionPills {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 2rem;
 }
 
-
+.liked {
+  composes: actionPills;
+  color: var(--primary-color);
+}
 
 /* Override Emerald's CSS */
-.videoDetailCard{
-    max-width:40rem;
-    border:none;
-    padding:0;
-    margin:auto;
+.videoDetailCard {
+  max-width: 40rem;
+  border: none;
+  padding: 0;
+  margin: auto;
 }
 
-.videoDetailCardHeading{
-    font-size: 1.2rem;
-    margin:1rem 0;
+.videoDetailCardHeading {
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
 @media screen and (max-width: 700px) {
-    .videoDetailCard{
-        max-width:100%;
-    }
-    
+  .videoDetailCard {
+    max-width: 100%;
   }
+}

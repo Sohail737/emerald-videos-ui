@@ -10,10 +10,6 @@ export const VideoList = () => {
   const query = new URLSearchParams(useLocation().search);
   const searchParams = query.get("search");
 
-  console.log({ searchParams });
-
-  
-
   const filterSearch = (videoList, searchParams) => {
     if (searchParams !== "" && searchParams !== null) {
       return videoList.filter((video) =>

@@ -15,7 +15,6 @@ export const VideoDetailCard = ({ video }) => {
   const { isUserLoggedIn } = useAuth();
   const location = useLocation();
   const path=location.pathname;
-  console.log("liked videos in video detail card", likedVideos);
   const showModal = () => {
     setOpenModal((openModal) => (openModal = true));
   };
