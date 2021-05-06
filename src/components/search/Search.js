@@ -1,24 +1,20 @@
 import { useEffect, useState } from "react";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./Search.module.css";
 export const Search = () => {
   const [search, setSearch] = useState("");
   const query = new URLSearchParams(useLocation().search);
   const searchParams = query.get("search");
   useEffect(() => {
-    if (
-      searchParams === "" ||
-      searchParams === null
-    ) {
+    if (searchParams === "" || searchParams === null) {
       setSearch("");
     }
-  }, [searchParams]);
 
-  useEffect(() => {
     if (searchParams !== "" && searchParams !== null) {
       setSearch((prev) => (prev = searchParams));
     }
   }, [searchParams]);
+
 
   const navigate = useNavigate();
 
