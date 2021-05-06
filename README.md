@@ -1,2 +1,1 @@
-# emerald-videos-ui
- 
+# Emerald Videos UI
